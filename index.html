@@ -1,273 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oscar Yair Núñez Hernández</title>
-    <meta name="Description" content="Oscar Núñez Portfolio" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Oscar Yair Núñez Hernández | Tech Artist & Game Developer</title>
+    <meta name="description" content="Portafolio de Oscar Núñez - Tech Artist especializado en desarrollo de videojuegos, arte 3D, VFX y Unity. +2 años de experiencia en desarrollo de juegos.">
+    
+    <!-- Meta Tags SEO -->
+    <meta name="keywords" content="tech artist, game developer, unity developer, 3d artist, vfx, videojuegos, desarrollo de juegos, oscar núñez, ozcardev">
+    <meta name="author" content="Oscar Yair Núñez Hernández">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Oscar Núñez - Tech Artist & Game Developer">
+    <meta property="og:description" content="Portafolio de Oscar Núñez - Especialista en Unity, 3D Art y VFX con experiencia en desarrollo de videojuegos.">
+    <meta property="og:image" content="./Img/og-image.jpg">
+    <meta property="og:url" content="https://ozcardev.github.io/OzcarDevCV/">
+    <meta property="og:type" content="website">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="Css/style.css">
+    <!-- Favicon -->
     <link rel="icon" href="./Img/RoundedIcon.png">
-
-
-
+    
+    <!-- Preload crítico -->
+    <link rel="preload" href="./webFonts/ShlopRegular/font.woff2" as="font" type="font/woff2" crossorigin>
 </head>
+<body>
+    <!-- Partículas de fondo -->
+    <div id="particles-container" class="particles-container"></div>
 
-<body style="background-color: black">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <!-- Navegación -->
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top" style="margin-top: -10px;">
-            <div class="container-fluid" style="background-color: #000000;">
-                <a class="navbar-brand" href="#">
-                    <img src="./Img/RoundedIcon.png" alt="Logo" width="50" height="Auto"
-                        class="d-inline-block align-text-top">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand float-element" href="index.html">
+                    <img src="./Img/RoundedIcon.png" alt="Logo Oscar Núñez - Tech Artist" width="50" height="50">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto stagger-fade-in">
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#Home">About</a>
-                        </li>
-                        
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#Proyectos" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Games</a>
-                            <ul class="dropdown-menu bg-dark">
-                                <li><a class="dropdown-item text-light bg-dark" href="#VrHelsing">VR Helsing </a></li>
-                                <li><a class="dropdown-item text-light bg-dark" href="#Photogenic">Photogenic</a></li>
-                                <li><a class="dropdown-item text-light bg-dark" href="#Crazy">Crazy Delivery</a></li>
-                            </ul>
+                            <a class="nav-link active" href="index.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#3D">3DArt</a>
+                            <a class="nav-link" href="projects.html">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#Multimedia">VFX</a>
+                            <a class="nav-link" href="gallery.html">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#Contacto">Contact</a>
+                            <a class="nav-link" href="contact.html">Contact</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="container-fluid" style="margin-top: 10%;">
-
-        <div class="row" id="Home">
-
-            <div class="col-lg-6 col-12 ">
-                <img src="./Img/Yo.jpg" class="mx-auto d-block" style="border-radius: 100%;" alt="Oscar Núñez"
-                    height="Auto" width="60%">
-            </div>
-            <div class="col-lg-6 col-12 text-light text-lg-start text-center" style="margin-top: 100px;" >
-                <h1 class="display-1">Oscar Núñez</h1>
-                <p class="fs-3">Tech Artist</p>
-                <p class="fs-4">Experience in C# and Unity 2D and 3D, shader graph and shaderlab, 3D Art and VFX.  Currently an engineering student in Software and Video Game Development.</p>
-                <a href="https://www.instagram.com/ozcar.dev"><img src="./Img/instagramIcon.png" alt="Instagram"
-                        height="50px" width="Altura" style="margin: 10px;"></a>
-                <a href="https://ozcardev.itch.io/"><img src="./Img/itchIcon.png" alt="Itch.io" height="50px"
-                        width="Altura" style="margin: 10px;"></a>
-                <a href="https://github.com/OzcarDev"><img src="./Img/githubLogo.png" alt="Github" height="50px"
-                        width="Altura" style="margin: 10px;"></a>
-            </div>
-        </div>
-    </div>
-    
-    <hr style=" color: rgb(235, 1, 125); border: 3px solid;">
-    <div class="container-fluid" id="Proyectos" style="margin-top: 100px;">
-        <br>
-        <h2 class="display-2 text-center text-light" id="VrHelsing">Games</h2>
-        <br><br><br>
-        <div class="text-center text-light display-5">VR Helsing</div>
-        <br><br>
-        <div class="row">
-            <div class="col-lg-6 col-12">
-                <iframe  width="640" height="360" src="https://www.youtube.com/embed/Yadiwh_cZRo?si=agL38i7-gPU7MFjx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <div class="col-lg-6 col-12 text-light text-lg-start text-center">
-                <p class="fs-4">I was Co-Game Designer of all systems, I did most of the 3D art and vfx, I designed all the props and characters, such as "Limb Ripper" the main weapon of the game and "Demon" one of the most recurring enemies. Currently still on development.</p>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid" id="Photogenic" style="margin-top: 100px;">
-        <br><br>
-        <div class="text-center text-light display-5">Photogenic</div>
-        <br><br>
-        <div class="row">
-            <div class="col-lg-6 col-12">
-                <iframe width="640" height="360" src="https://www.youtube.com/embed/yYeKgVZFWuc?si=d3OoPogiWrepuzK6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <div class="col-lg-6 col-12 text-light text-lg-start text-center">
-                <p class="fs-4">I was a designer and programmer of the game, I created game systems such as the camera, with which you can take photos of the game and save them to later view them in a photo album.</p>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid" style="margin-top: 100px;" id="Crazy">
-        <br><br>
-        <div class="text-center text-light display-5">Crazy Delivery</div>
-        <br><br>
-        <div class="row">
-            <div class="col-lg-6 col-12">
-                <div id="carouselExample2" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./Img/CrazyDelivery01.jpg" class="w-100 d-block" alt="Game ScreenShot">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./Img/CrazyDelivery02.jpg" class="w-100 d-block" alt="Game ScreenShot">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./Img/CrazyDelivery03.jpg" class="w-100 d-block" alt="Game ScreenShot">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12">
-                <div class="d-flex justify-content-center text-light text-lg-start text-center">
-                    <p class="fs-4">I was Game Designer, 3D and VFX artist, I also designed the UI. Create all the available vehicles as well as the game environment.</p>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <a
-                        href="https://play.google.com/store/apps/details?id=com.TrashGamez.CrazyDelivery&pcampaignid=web_share"><img
-                            src="./Img/PlaystoreButton.png" alt="PlaystoreButton" class="img-fluid"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr style=" color: rgb(235, 1, 125); border: 3px solid;">
-    <div class="container-fluid" style="margin-top: 100px;" id="3D">
-        <div class="text-center text-light">
-            <br>
-            <br>
-            <h2 class="display-2">3D Art</h2>
-            <br><br><br>
-            <div class="row">
-                <div class="col-lg-6 col-12" style="padding-right: 2%; padding-left: 2%;">
-                    <p class="fs-3"><b>Limb Ripper</b></p>
-                    <div class="sketchfab-embed-wrapper"> <iframe title=""Limb Ripper" pixel art Gun" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/c79b25fec1ec43df93182b696d41c9d3/embed"> </iframe> </div>
-                </div>
-                <div class="col-lg-6 col-12" style="padding-right: 2%; padding-left: 2%;">
-                    <p class="fs-4"><b>VR Helsing Props</b></p>
-                    <div class="sketchfab-embed-wrapper"> <iframe title="Low Poly Pixel Art Graveyard" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/ca6129030c7043c4ac7b3224f5c08351/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"></div>
-                </div>
-            </div>
-            <br><br>
-            <div class="row">
-                <div class="col-lg-6 col-12" style="padding-right: 2%; padding-left: 2%;">
-                    <p class="fs-3"><b>Pixel Characters</b></p>
-                    <img src="./Img/LeyYYo.png" alt="PinkBear" width="80%" height="auto">
-                </div>
-                <div class="col-lg-6 col-12" style="padding-right: 2%; padding-left: 2%;">
-                    <p class="fs-4"><b>VR Helsing Demon</b></p>
-                    <img src="./Img/Demon.png" alt="PinkBear" width="80%" height="auto">
-                </div>
-            </div>
-            <br><br>
-            <div class="row">
-                <div class="col-lg-6 col-12" style="padding-right: 2%; padding-left: 2%;">
-                    <p class="fs-3"><b>Demon Heart</b></p>
-                    <img src="./Img/Heart.png" alt="PinkBear" width="80%" height="auto">
-                </div>
-                <div class="col-lg-6 col-12" style="padding-right: 2%; padding-left: 2%;">
-                    <p class="fs-4"><b>Sly Fan Art</b></p>
-                    <img src="./Img/Sly.png" alt="PinkBear" width="80%" height="auto">
-                </div>
-            </div>
-            <br><br>
-            <div class="row">
-                <div class="col-lg-6 col-12" style="padding-right: 2%; padding-left: 2%;">
-                    <p class="fs-3"><b>Jake The Dog Fan Art</b></p>
-                    <img src="./Img/JakeTheDog.png" alt="PinkBear" width="80%" height="auto">
-                </div>
-                <div class="col-lg-6 col-12" style="padding-right: 2%; padding-left: 2%;">
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="container-fluid" style="margin-top: 100px;" id="Multimedia">
-        <br><br>
-        <div class="text-center text-light display-5">VFX</div>
-        <br><br>
-        <div id="carouselExample3" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-center">
-                        <iframe width="1120" height="630" src="https://www.youtube.com/embed/3FbNBiqBcQg?si=m_q7A_6LivhTO22E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12 text-center">
+                    <div class="morph-shape" style="width: 400px; height: 400px; background: linear-gradient(45deg, var(--rosa), var(--cian)); margin: 0 auto;">
+                        <img src="./Img/Yo.jpg" class="profile-img mx-auto float-element" alt="Oscar Núñez - Tech Artist" loading="eager" style="border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;">
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
-                        <iframe width="1120" height="630" src="https://www.youtube.com/embed/i5s40-0rTOI?si=115ZTymEa1g9Tbax" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="col-lg-6 col-12 slide-in-right">
+                    <h1 class="display-1 neon-text">Oscar Núñez</h1>
+                    <p class="fs-3 typewriter">Tech Artist & Game Developer</p>
+                    <p class="fs-4 slide-in-bottom">Experience in C# and Unity 2D and 3D, shader graph and shaderlab, 3D Art and VFX. Currently an engineering student in Software and Video Game Development.</p>
+                    
+                    <div class="social-icons d-flex mt-4 stagger-fade-in">
+                        <a href="https://www.instagram.com/ozcar.dev" aria-label="Sígueme en Instagram" class="wave-button zoom-hover">
+                            <img src="./Img/instagramIcon.png" alt="Instagram Oscar Núñez">
+                        </a>
+                        <a href="https://ozcardev.itch.io/" aria-label="Visita mi perfil en Itch.io" class="wave-button zoom-hover">
+                            <img src="./Img/itchIcon.png" alt="Itch.io OzcarDev">
+                        </a>
+                        <a href="https://github.com/OzcarDev" aria-label="Revisa mi código en GitHub" class="wave-button zoom-hover">
+                            <img src="./Img/githubLogo.png" alt="GitHub OzcarDev">
+                        </a>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-    </div>
+    </section>
 
-    <footer style="background-color: rgb(235, 1, 125);" id="Contacto">
-        <div class="container-fluid" style="margin-top: 100px; ">
-            <br><br>
-            <div class="row">
-                <div class="col-lg-4 col-12">
-                    <div class="text-lg-start text-center">
-                        <img src="./Img/ozcarDevBanner.png" alt="OzcarDev Banner" width="400px" height="auto"
-                            class="d-block mx-auto">
+    <!-- Call-to-Action Section -->
+    <section class="cta-section pulse-element">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-12 text-center">
+                    <h2 class="display-2 mb-4 neon-text">¿Tienes un proyecto en mente?</h2>
+                    <p class="fs-3 mb-4">Estoy disponible para trabajar en proyectos desafiantes de desarrollo de videojuegos</p>
+                    <div class="cta-buttons stagger-fade-in">
+                        <a href="contact.html" class="btn btn-primary btn-lg wave-button" onclick="portfolioAnimations.createConfetti()">Contrátame</a>
+                        <a href="projects.html" class="btn btn-outline-primary btn-lg wave-button">Ver Mis Proyectos</a>
+                        <a href="./docs/CV-Oscar-Nunez.pdf" class="btn btn-outline-primary btn-lg wave-button" download>
+                            Descargar CV
+                        </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="col-lg-4 col-12 text-light">
-                    <br><br>
-                    <p class="fs-3"><img src="./Img/PhoneIcon.png" alt="Phone" height="50px" width="Altura"
-                            style="margin: 10px;">720 1739280</p>
-                    <br><br>
-                    <p class="fs-3"><img src="./Img/MailIcon.png" alt="Mail" height="50px" width="Altura"
-                            style="margin: 10px;">oscarnunez@trashgamez.net</p>
-                </div>
-                <div class="col-lg-4 col-12 d-flex justify-content-center" style="margin-top: 50px;">
-                    <a href="https://www.instagram.com/ozcar.dev"><img src="./Img/instagramIcon.png" alt="Instagram"
-                            height="50px" width="Altura" style="margin: 10px;"></a>
-                    <a href="https://ozcardev.itch.io/"><img src="./Img/itchIcon.png" alt="Itch.io" height="50px"
-                            width="Altura" style="margin: 10px;"></a>
-                    <a href="https://github.com/OzcarDev"><img src="./Img/githubLogo.png" alt="Github" height="50px"
-                            width="Altura" style="margin: 10px;"></a>
+    <hr>
+
+    <!-- Video de Habilidades -->
+    <section id="skills">
+        <div class="container-fluid">
+            <h2 class="display-2 text-center mb-5 animated-gradient-text">Video Reel</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-12">
+                    <div class="video-container glow-card">
+                        <iframe width="1120" height="630" src="https://www.youtube.com/embed/3FbNBiqBcQg?si=m_q7A_6LivhTO22E" title="Video demostrativo de habilidades - Oscar Núñez" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
-            <br><br>
+        </div>
+    </section>
 
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-12 text-center mb-4">
+                    <img src="./Img/ozcarDevBanner.png" alt="OzcarDev Banner - Oscar Núñez" class="footer-logo float-element">
+                </div>
+                <div class="col-lg-4 col-12 text-center mb-4">
+                    <div class="contact-info justify-content-center">
+                        <img src="./Img/PhoneIcon.png" alt="Teléfono contacto" height="40" class="zoom-hover">
+                        <p class="fs-4 mb-0">720 1739280</p>
+                    </div>
+                    <div class="contact-info justify-content-center">
+                        <img src="./Img/MailIcon.png" alt="Email contacto" height="40" class="zoom-hover">
+                        <p class="fs-4 mb-0">oscarnunez@trashgamez.net</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12 text-center">
+                    <div class="social-icons d-flex justify-content-center stagger-fade-in">
+                        <a href="https://www.instagram.com/ozcar.dev" aria-label="Instagram Oscar Núñez" class="wave-button">
+                            <img src="./Img/instagramIcon.png" alt="Instagram">
+                        </a>
+                        <a href="https://ozcardev.itch.io/" aria-label="Itch.io OzcarDev" class="wave-button">
+                            <img src="./Img/itchIcon.png" alt="Itch.io">
+                        </a>
+                        <a href="https://github.com/OzcarDev" aria-label="GitHub OzcarDev" class="wave-button">
+                            <img src="./Img/githubLogo.png" alt="GitHub">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
-</body>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Animaciones personalizadas -->
+    <script src="animations.js"></script>
+    
+    <script>
+        // Hacer la instancia global para el confeti
+        let portfolioAnimations;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            portfolioAnimations = new PortfolioAnimations();
+            portfolioAnimations.animateSkills();
+        });
+    </script>
+</body>
 </html>
