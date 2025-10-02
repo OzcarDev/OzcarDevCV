@@ -83,7 +83,7 @@ class ProjectsManager {
                 title: 'VR Helsing',
                 description: 'Co-Game Designer and 3D Artist for this immersive VR horror experience. Responsible for weapon design, character modeling, and VFX systems.',
                 longDescription: `
-                    <p>VR Helsing is an immersive virtual reality horror game where players take on the role of a monster hunter in a gothic fantasy world.</p>
+                    <p>Virtual reality boomer-shooter game where I led comprehensive development, directing multidisciplinary teams and making key creative and technical decisions. Implemented core systems in Unity with C#, developed complete art pipeline, and optimized performance for VR devices.</p>
                     <p><strong>My contributions:</strong></p>
                     <ul>
                         <li>Co-designed all game systems and mechanics</li>

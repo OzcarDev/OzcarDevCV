@@ -145,15 +145,14 @@ class ContactFormManager {
         this.setSubmitState(true);
 
         try {
-            // Simular envío (reemplazar con tu servicio real)
             await this.submitForm();
             
-            this.showMessage('Message sent successfully! I\'ll get back to you within 24 hours.', 'success');
+            this.showMessage('¡Mensaje enviado exitosamente! Te responderé dentro de 24 horas.', 'success');
             this.form.reset();
             this.resetFormState();
             
         } catch (error) {
-            this.showMessage('Sorry, there was an error sending your message. Please try again or contact me directly.', 'error');
+            this.showMessage('Lo siento, hubo un error enviando tu mensaje. Por favor intenta nuevamente o contáctame directamente.', 'error');
             console.error('Form submission error:', error);
         } finally {
             this.isSubmitting = false;
@@ -175,48 +174,55 @@ class ContactFormManager {
         return isValid;
     }
 
-    // Simular envío del formulario
     async submitForm() {
-        // Aquí integrarías con tu servicio de email preferido:
-        // - EmailJS (https://www.emailjs.com/)
-        // - Formspree (https://formspree.io/)
-        // - Netlify Forms (si hosteas en Netlify)
-        
         const formData = this.collectFormData();
         
-        // Simular delay de red
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        
-        // Simular respuesta exitosa
-        console.log('Form data:', formData);
-        
-        // Para producción, descomenta y configura:
-        /*
-        const response = await fetch('https://formspree.io/f/your-form-id', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData)
-        });
-        
-        if (!response.ok) throw new Error('Form submission failed');
-        */
-        
-        return { success: true };
+        try {
+            // Verificar que EmailJS esté cargado
+            if (typeof emailjs === 'undefined') {
+                throw new Error('EmailJS no está cargado. Verifica el script en el HTML.');
+            }
+            
+            // Inicializar EmailJS
+            await emailjs.init(emailConfig.userId);
+            
+            console.log('Enviando email con datos:', formData);
+            
+            // Enviar email usando EmailJS con los campos que tienes
+            const response = await emailjs.send(
+                emailConfig.serviceId,
+                emailConfig.templateId,
+                {
+                    from_name: `${formData.firstName} ${formData.lastName}`,
+                    from_email: formData.email,
+                    message: formData.message,
+                    timestamp: new Date().toLocaleString('es-ES')
+                }
+            );
+            
+            console.log('✅ Email enviado exitosamente:', response);
+            return { success: true, data: response };
+            
+        } catch (error) {
+            console.error('❌ Error enviando email:', error);
+            console.error('Detalles del error:', {
+                status: error.status,
+                text: error.text,
+                userID: emailConfig.userId,
+                serviceID: emailConfig.serviceId,
+                templateID: emailConfig.templateId
+            });
+            throw new Error('No se pudo enviar el mensaje. Por favor intenta nuevamente.');
+        }
     }
 
-    // Recolectar datos del formulario
+    // Recolectar datos del formulario (SOLO los campos que tienes)
     collectFormData() {
         return {
             firstName: document.getElementById('firstName').value,
             lastName: document.getElementById('lastName').value,
             email: document.getElementById('email').value,
-            company: document.getElementById('company').value,
-            projectType: document.getElementById('projectType').value,
-            budget: document.getElementById('budget').value,
-            timeline: document.getElementById('timeline').value,
             message: document.getElementById('message').value,
-            reference: document.querySelector('input[name="reference"]:checked')?.value,
-            newsletter: document.getElementById('newsletter').checked,
             timestamp: new Date().toISOString()
         };
     }
@@ -267,148 +273,9 @@ class ContactFormManager {
             }, 5000);
         }
     }
-
-    // Inicializar tooltips (opcional)
-    setupTooltips() {
-        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl);
-        });
-    }
-}
-
-// Funcionalidades adicionales de contacto
-class ContactEnhancements {
-    constructor() {
-        this.init();
-    }
-
-    init() {
-        this.setupQuickContact();
-        this.setupSocialLinks();
-        this.setupAvailabilityIndicator();
-    }
-
-    // Configurar contactos rápidos
-    setupQuickContact() {
-        // Agregar event listeners para los botones de contacto rápido
-        const quickCallBtn = document.querySelector('a[href^="tel:"]');
-        const quickEmailBtn = document.querySelector('a[href^="mailto:"]');
-        
-        if (quickCallBtn) {
-            quickCallBtn.addEventListener('click', () => {
-                this.trackContactAction('phone_click');
-            });
-        }
-        
-        if (quickEmailBtn) {
-            quickEmailBtn.addEventListener('click', () => {
-                this.trackContactAction('email_click');
-            });
-        }
-    }
-
-    // Configurar enlaces sociales
-    setupSocialLinks() {
-        const socialLinks = document.querySelectorAll('.social-icons a');
-        
-        socialLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                const platform = link.getAttribute('aria-label').toLowerCase();
-                this.trackContactAction(`social_${platform}`);
-            });
-        });
-    }
-
-    // Indicador de disponibilidad
-    setupAvailabilityIndicator() {
-        const statusDot = document.querySelector('.status-dot');
-        if (!statusDot) return;
-
-        // Simular cambio de estado (en una app real, esto vendría de una API)
-        setInterval(() => {
-            statusDot.classList.toggle('pulse');
-        }, 2000);
-    }
-
-    // Trackear acciones de contacto (para analytics)
-    trackContactAction(action) {
-        console.log('Contact action:', action);
-        // Aquí integrarías Google Analytics o similar
-        // gtag('event', 'contact_action', { 'action': action });
-    }
-
-    // Copiar email al portapapeles
-    setupEmailCopy() {
-        const emailElement = document.querySelector('.contact-details .fs-4');
-        if (!emailElement) return;
-
-        emailElement.style.cursor = 'pointer';
-        emailElement.title = 'Click to copy email';
-        
-        emailElement.addEventListener('click', async () => {
-            const email = emailElement.textContent;
-            
-            try {
-                await navigator.clipboard.writeText(email);
-                this.showCopyFeedback('Email copied to clipboard!');
-            } catch (err) {
-                console.error('Failed to copy email:', err);
-                this.showCopyFeedback('Failed to copy email');
-            }
-        });
-    }
-
-    showCopyFeedback(message) {
-        // Implementar feedback visual para copiado
-        const feedback = document.createElement('div');
-        feedback.textContent = message;
-        feedback.style.cssText = `
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--rosa);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            z-index: 10000;
-        `;
-        
-        document.body.appendChild(feedback);
-        
-        setTimeout(() => {
-            document.body.removeChild(feedback);
-        }, 3000);
-    }
 }
 
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = new ContactFormManager();
-    const contactEnhancements = new ContactEnhancements();
-    
-    // Hacer disponible globalmente si es necesario
-    window.contactFormManager = contactForm;
+    new ContactFormManager();
 });
-
-// Integración simple con EmailJS (ejemplo)
-function initEmailJS() {
-    // Descomenta y configura si usas EmailJS
-    /*
-    emailjs.init("YOUR_PUBLIC_KEY");
-    
-    window.submitContactForm = function(formData) {
-        return emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-            from_name: `${formData.firstName} ${formData.lastName}`,
-            from_email: formData.email,
-            company: formData.company,
-            project_type: formData.projectType,
-            budget: formData.budget,
-            timeline: formData.timeline,
-            message: formData.message,
-            reference: formData.reference,
-            newsletter: formData.newsletter
-        });
-    };
-    */
-}

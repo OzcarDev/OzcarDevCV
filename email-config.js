@@ -2,12 +2,12 @@
 // Configuración para EmailJS (https://www.emailjs.com/)
 
 const emailConfig = {
-    serviceId: 'your_service_id', // Crea un servicio en EmailJS
-    templateId: 'your_template_id', // Crea una plantilla
-    userId: 'your_user_id' // Tu User ID de EmailJS
+    serviceId: 'service_fdsejwx',
+    templateId: 'template_7wifylk', 
+    userId: 'ltf2Bk-LCis48fFyd'
 };
 
-// Función para enviar email
+// Función opcional - ya no es necesaria pero la dejo por si la usas en otro lugar
 async function sendEmail(formData) {
     try {
         const response = await emailjs.send(
@@ -16,10 +16,8 @@ async function sendEmail(formData) {
             {
                 from_name: `${formData.firstName} ${formData.lastName}`,
                 from_email: formData.email,
-                subject: formData.subject,
-                project_type: formData.projectType,
                 message: formData.message,
-                to_email: 'oscarnunez@trashgamez.net'
+                to_email: 'osja1601@gmail.com'
             },
             emailConfig.userId
         );
