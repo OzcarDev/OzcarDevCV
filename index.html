@@ -1,175 +1,344 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oscar Yair Núñez Hernández | Tech Artist & Game Developer</title>
-    <meta name="description" content="Portafolio de Oscar Núñez - Tech Artist especializado en desarrollo de videojuegos, arte 3D, VFX y Unity. +2 años de experiencia en desarrollo de juegos.">
-    
-    <!-- Meta Tags SEO -->
-    <meta name="keywords" content="tech artist, game developer, unity developer, 3d artist, vfx, videojuegos, desarrollo de juegos, oscar núñez, ozcardev">
-    <meta name="author" content="Oscar Yair Núñez Hernández">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Oscar Núñez - Tech Artist & Game Developer">
-    <meta property="og:description" content="Portafolio de Oscar Núñez - Especialista en Unity, 3D Art y VFX con experiencia en desarrollo de videojuegos.">
-    <meta property="og:image" content="./Img/og-image.jpg">
-    <meta property="og:url" content="https://ozcardev.github.io/OzcarDevCV/">
-    <meta property="og:type" content="website">
-    
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="Css/style.css">
-    <!-- Favicon -->
-    <link rel="icon" href="./Img/RoundedIcon.png">
-    
-    <!-- Preload crítico -->
-    <link rel="preload" href="./webFonts/ShlopRegular/font.woff2" as="font" type="font/woff2" crossorigin>
+    <title>OzcarDev</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Resources/Img/LogoBG.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2a7b39a863.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-    <!-- Partículas de fondo -->
-    <div id="particles-container" class="particles-container"></div>
-
-    <!-- Navegación -->
-    <header>
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand " href="index.html">
-                    <img src="./Img/RoundedIcon.png" alt="Logo Oscar Núñez - Tech Artist" width="50" height="50">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto stagger-fade-in">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="gallery.html">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-image">
+                    <img src="Resources/Img/LogoBG.png" alt="Oscar Núñez" class="profile-img">
+                </div>
+                <div class="header-info">
+                    <h1 class="name">Ozcar Dev</h1>
+                    <h2 class="title">Technical Game Designer & Technical Artist</h2>
+                    <p class="description">Hi!, I'm <b>Oscar Núñez</b>, game crafter who loves exploring new mechanics to create fun and meaningful experiences.</p>
+                    <div class="header-actions">
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/oscar-núñez-hernández-2a4391251" target="_blank" aria-label="LinkedIn">
+                                <img src="Resources/Img/InIconBlack.png" alt="LinkedIn">
+                            </a>
+                            <a href="https://github.com/OzcarDev" target="_blank" aria-label="GitHub">
+                                <img src="Resources/Img/GitIconBlack.png" alt="GitHub">
+                            </a>
+                            <a href="https://www.instagram.com/ozcar.dev" target="_blank" aria-label="Instagram">
+                                <img src="Resources/Img/InstaIconBlack.png" alt="Instagram">
+                            </a>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1xyruSrjU3btcT3TRS52FBcZ6gKJzDRPL/view?usp=drive_link" class="resume-btn btn" target="_blank">View Resume</a>
+                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section" id="home">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-12 text-center">
+    <nav class="sub-navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#videos">Shader & VFX Reel</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="Resources/Img/OscarNH.jpg" alt="Oscar Núñez">
+                    </div>
+                    <div class="about-text">
+                        <h2>About Me</h2>
+                        <p>Software developer with a focus on technical art and game design. I create interactive systems, tools, and graphics, combining them to create enjoyable experiences.</p>
+                        <p>Driven by a “less is more” philosophy, I focus on clean mechanics, clear feedback, and purposeful design over noise and excess.</p>
+                        <p>Lead projects  from concept to release, published games on Steam and Play Store, and presented work at Mexican events such as EGS and GCMX.</p>
+                    </div>
+                </div>
+
+                <div class="tools-section">
+                    <h3>Tools & Technologies</h3>
+                    <div class="tools-grid">
+                        <div class="tool-item">
+                            <img src="Resources/Img/Unity.png" alt="Unity">
+                            <span>Unity</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="Resources/Img/c-sharp.png" alt="C#">
+                            <span>C#</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="Resources/Img/js.png" alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="Resources/Img/mysql-database.png" alt="MySQL">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="Resources/Img/Blender.png" alt="Blender">
+                            <span>Blender</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="Resources/Img/photoshop.png" alt="Photoshop">
+                            <span>Adobe Photoshop</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="Resources/Img/illustrator.png" alt="Illustrator">
+                            <span>Adobe Illustrator</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="Resources/Img/git.png" alt="Git">
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-section">
+                    <h3>Soft Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Problem Solving</div>
+                        <div class="skill-item">Team Collaboration</div>
+                        <div class="skill-item">Proactivity</div>
+                        <div class="skill-item">Adaptability</div>
+                        <div class="skill-item">Attention to Detail</div>
+                        <div class="skill-item">Leadership</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section active">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Projects</h2>
                     
-                        <img src="./Img/Yo.jpg" class="profile-img mx-auto " alt="Oscar Núñez - Tech Artist" loading="eager" >
+                </div>
+                
+               <div class="featured-project">
+    <div class="featured-project-card">
+        <div class="featured-project-media">
+            <iframe src="https://www.youtube.com/embed/DAWQglJx-pc" title="VR Helsing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="featured-project-content">
+            <h3 class="featured-project-title">VR Helsing - Featured Project</h3>
+            <p class="project-role">Game Director & Technical Artist</p>
+            <p class="featured-project-description">
+                VR HELSING is a virtual reality boomer shooter that blends retro aesthetics with modern gameplay design. 
+                Inspired by classic monsters and the Steampunk genre, it creates an immersive universe full of style and action.
+                This is my latest and most ambitious project to date.
+            </p>
+            <div class="project-tags">
+                <span>Unity</span>
+                <span>C#</span>
+                <span>Blender</span>
+                <span>Shader Graph</span>
+                <span>VR</span>
+            </div>
+            <div class="featured-project-buttons">
+                <a href="projects/vr-helsing.html" class="btn">View Project Details</a>
+                <a href="https://store.steampowered.com/app/3540160/VR_Helsing" class="btn btn-secondary" target="_blank">Steam Page</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="projects-grid">
                     
+                    <article class="project-card">
+                        <div class="project-media">
+                            <iframe src="https://www.youtube.com/embed/yaSACX5Hw-0?si=Rf-hp-YihfHba9Fv" title="Photogenic" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-content">
+                            <h3>Crazy Delivery</h3>
+                            <p class="project-role">Game Designer & UI/UX Designer</p>
+                            <p>Crazy Delivery is a fast-paced mobile game where players navigate challenging environments to make deliveries against the clock.</p>
+                            <div class="project-tags">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>UI/UX Design</span>
+                                <span>Shader Graph</span>
+                                <span>Blender</span>
+                                <span>Adobe Illustrator</span>
+                                <span>Adobe Photoshop</span>
+                                <span>Android</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/crazy-delivery.html" class="btn">View Details</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.TrashGamez.CrazyDelivery" class="btn btn-secondary" target="_blank">Play Store</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card">
+                        <div class="project-media">
+                            <iframe src="https://www.youtube.com/embed/yYeKgVZFWuc" title="Photogenic" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-content">
+                            <h3>Photogenic</h3>
+                            <p class="project-role">Game Designer & Programmer</p>
+                            <p>Photogenic is a single-player walking simulator where players can freely explore an entire city, take photos, and interact with the environment to complete a photo album.</p>
+                            <div class="project-tags">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>Shader Graph</span>
+                                <span>UI/UX Design</span>
+                                <span>Adobe Photoshop</span>
+                                <span>PC</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/photogenic.html" class="btn">View Details</a>
+                                <a href="https://ozcardev.itch.io/photogenic" class="btn btn-secondary" target="_blank">Itch.io</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="Resources/Img/Denedig.png" alt="Línea del tiempo versión: Inventores Mexicanos">
+                        </div>
+                        <div class="project-content">
+                            <h3>Inventores Mexicanos</h3>
+                            <p class="project-role">Game Designer & Programmer</p>
+                            <p>Explore the fascinating history of Mexican innovation with our exciting Mexican Inventors Timeline video game!</p>
+                            <div class="project-tags">
+                                <span>Unity</span>
+                                <span>C#</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/mexican-inventors.html" class="btn">View Details</a>
+                                <a href="https://www.denedig.online/lineadeltiempo.php" class="btn btn-secondary" target="_blank">Play Online</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <div class="col-lg-6 col-12 slide-in-right">
-                    <h1 class="display-1 neon-text">Oscar Yair Núñez Hernández</h1>
-                    <p class="fs-1 typewriter">Tech Artist & Game Developer</p>
-                    <p class="fs-4 slide-in-bottom">Software Engineer specialized in Interactive Software and Video Game Development with over 2 years of experience leading projects from conception to publication. I have published 2 titles on digital stores (Play Store and Steam) and presented demos at national events like EGS, GCMX, and Liverpool Gaming Fest.</p>
-                    <p class="fs-4 slide-in-bottom">My expertise combines strong technical development in Unity and Unreal Engine with complete artistic skills in 3D pipeline, VFX, and UI/UX. I specialize in creating immersive VR experiences and innovative gameplay mechanics.</p>
-                    <div class="social-icons d-flex mt-4 stagger-fade-in">
-                        <a href="https://www.instagram.com/ozcar.dev" aria-label="Sígueme en Instagram" class="wave-button zoom-hover">
-                            <img src="./Img/instagramIcon.png" alt="Instagram Oscar Núñez">
-                        </a>
-                        <a href="https://ozcardev.itch.io/" aria-label="Visita mi perfil en Itch.io" class="wave-button zoom-hover">
-                            <img src="./Img/itchIcon.png" alt="Itch.io OzcarDev">
-                        </a>
-                        <a href="https://github.com/OzcarDev" aria-label="Revisa mi código en GitHub" class="wave-button zoom-hover">
-                            <img src="./Img/githubLogo.png" alt="GitHub OzcarDev">
-                        </a>
+            </div>
+        </section>
+
+        <section id="videos" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Shader & VFX Reel</h2>
+                </div>
+                
+                <div class="video-showcase">
+                    <div class="video-player">
+                        <iframe src="https://www.youtube.com/embed/aPzjScgbxA4?si=-oBEzJojme4QiugH" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <p>This reel features real-time shaders and VFX I created, including custom lighting, vertex deformation, shader-driven effects, and 3D models I designed and integrated into each scene.</p>            
+                        <div class="video-tools">
+                            <h4>Tools & Technologies</h4>
+                            <div class="tools-grid">
+                                <div class="tool-item">
+                                    <img src="Resources/Img/Unity.png" alt="Unity">
+                                    <span>Unity</span>
+                                </div>
+                                <div class="tool-item">
+                                    <img src="Resources/Img/c-sharp.png" alt="C#">
+                                    <span>C#</span>
+                                </div>
+                                <div class="tool-item">
+                                    <img src="Resources/Img/Blender.png" alt="Blender">
+                                    <span>Blender</span>
+                                </div>
+                                <div class="tool-item">
+                                    <img src="Resources/Img/photoshop.png" alt="Photoshop">
+                                    <span>Photoshop</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Call-to-Action Section -->
-    <section class="cta-section pulse-element">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-12 text-center">
-                    <h2 class="display-2 mb-4 neon-text">More about me</h2>
-                    <div class="cta-buttons stagger-fade-in">
-                        <a href="contact.html" class="btn btn-primary btn-lg wave-button" onclick="portfolioAnimations.createConfetti()">Contact</a>
-                        <a href="projects.html" class="btn btn-outline-primary btn-lg wave-button">Projects</a>
-                        <a href="https://drive.google.com/file/d/1xyruSrjU3btcT3TRS52FBcZ6gKJzDRPL/view?usp=sharing" class="btn btn-outline-primary btn-lg wave-button" download>
-                            Link to my resume
-                        </a>
-                    </div>
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contact</h2>
                 </div>
-            </div>
-        </div>
-    </section>
-
-   
-
-    <!-- Video de Habilidades -->
-    <section id="skills">
-        <div class="container-fluid">
-            <h2 class="display-2 text-center mb-5 neon-text">Video Reel</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-12">
-                    <div class="video-container glow-card">
-                        <iframe width="1120" height="630" src="https://www.youtube.com/embed/3FbNBiqBcQg?si=m_q7A_6LivhTO22E" title="Video demostrativo de habilidades - Oscar Núñez" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-lg-4 col-12 text-center mb-4">
-                    <img src="./Img/ozcarDevBanner.png" alt="OzcarDev Banner - Oscar Núñez" class="footer-logo ">
-                </div>
-                <div class="col-lg-4 col-12 text-center mb-4">
-                    <div class="contact-info justify-content-center">
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Work Together</h3>
+                        <p>I'm open to job offers, collaborations, or contract work.
+If you're looking for someone who can blend design, code, and technical art to bring ideas to life</p>
                         
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <h4>Email</h4>
+                                <a href="mailto:osja1601@gmail.com">osja1601@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <a href="https://drive.google.com/file/d/1xyruSrjU3btcT3TRS52FBcZ6gKJzDRPL/view?usp=drive_link" class="resume-btn btn" target="_blank">View Resume</a>
                     </div>
-                  
+                    
+                    <div class="contact-form">
+                        <h3>Send me a message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Project collaboration, Job opportunity, etc.">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or inquiry..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn submit-btn">Send Message</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-12 text-center">
-                    <div class="social-icons d-flex justify-content-center stagger-fade-in">
-                        <a href="https://www.instagram.com/ozcar.dev" aria-label="Instagram Oscar Núñez" class="wave-button">
-                            <img src="./Img/instagramIcon.png" alt="Instagram">
-                        </a>
-                        <a href="https://ozcardev.itch.io/" aria-label="Itch.io OzcarDev" class="wave-button">
-                            <img src="./Img/itchIcon.png" alt="Itch.io">
-                        </a>
-                        <a href="https://github.com/OzcarDev" aria-label="GitHub OzcarDev" class="wave-button">
-                            <img src="./Img/githubLogo.png" alt="GitHub">
-                        </a>
-                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="Resources/Img/LogoBanner.png" alt="Ozcar Dev Logo">
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/oscar-núñez-hernández-2a4391251" target="_blank" aria-label="LinkedIn">
+                        <img src="Resources/Img/InIconWhite.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/OzcarDev" target="_blank" aria-label="GitHub">
+                        <img src="Resources/Img/GitIconWhite.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.instagram.com/ozcar.dev" target="_blank" aria-label="Instagram">
+                        <img src="Resources/Img/InstaIconWhite.png" alt="Instagram">
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Animaciones personalizadas -->
-    <script src="animations.js"></script>
-    
-    <script>
-        // Hacer la instancia global para el confeti
-        let portfolioAnimations;
-
-        document.addEventListener('DOMContentLoaded', () => {
-            portfolioAnimations = new PortfolioAnimations();
-            portfolioAnimations.animateSkills();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
