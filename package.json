@@ -1,0 +1,8 @@
+{
+  "name": "ozcardevcv",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "gen-sitemap": "node tools/generate_sitemap.js"
+  }
+}

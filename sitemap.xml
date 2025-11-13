@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://ozcar.dev/</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ozcar.dev/android-chrome-192x192.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://ozcar.dev/android-chrome-512x512.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://ozcar.dev/apple-touch-icon.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://ozcar.dev/favicon-16x16.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://ozcar.dev/favicon-32x32.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ozcar.dev/projects/crazy-delivery.html</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>  </url>
+  <url>
+    <loc>https://ozcar.dev/projects/mexican-inventors.html</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>  </url>
+  <url>
+    <loc>https://ozcar.dev/projects/photogenic.html</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>  </url>
+  <url>
+    <loc>https://ozcar.dev/projects/vr-helsing.html</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>  </url>
+</urlset>
